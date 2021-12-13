@@ -122,6 +122,7 @@ export function useActivator (
 
   let scope: EffectScope
   watch(() => !!props.activator, val => {
+    // console.log(val)
     if (val && IN_BROWSER) {
       scope = effectScope()
       scope.run(() => {
